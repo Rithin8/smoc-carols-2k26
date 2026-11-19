@@ -249,7 +249,7 @@ export default function App() {
   <header className="topbar">
     <div className="brand">
       <div className="brand-icon">
-        <img src="/CHURCH LOGO.png" alt="SMOC Church Logo" />
+        <img src="/src/CHURCH LOGO.png" alt="SMOC Church Logo" />
       </div>
 
       <div>
