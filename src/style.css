@@ -739,8 +739,10 @@ button:disabled { cursor: not-allowed; opacity: .4; }
   .song-page { display: block; }
 }
 .brand-icon img {
-  width: 30px;
-  height: 30px;
+  width: 34px;
+  height: 34px;
   object-fit: contain;
   border-radius: 50%;
+  display: block;
+}
 }
