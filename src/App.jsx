@@ -244,33 +244,40 @@ export default function App() {
   };
 
   return (
-    <div className={dark ? 'app dark' : 'app'}>
+    
+<div className={dark ? 'app dark' : 'app'}>
   <header className="topbar">
     <div className="brand">
       <div className="brand-icon">
         <img src="/smoc-logo.png" alt="SMOC Church Logo" />
       </div>
-            <h1>SMOC CAROLS</h1>
-            <span>CHRISTMAS 2K26</span>
-          </div>
-        </div>
 
-        <div className="header-actions">
-          <button className="icon-btn" onClick={() => setDark(!dark)} title="Toggle theme">
-            {dark ? <Sun /> : <Moon />}
-          </button>
-          <button className="icon-btn" onClick={shareSong} title="Share">
-            <Share2 />
-          </button>
-          <button className="icon-btn" onClick={downloadPDF} title="Print or save PDF">
-            <Download />
-          </button>
-          <button className="admin-button" onClick={() => setAdminOpen(true)}>
-            {session ? <Lock size={16} /> : <Lock size={16} />}
-            {session ? 'Admin' : 'Admin Login'}
-          </button>
-        </div>
-      </header>
+      <div>
+        <h1>SMOC CAROLS</h1>
+        <span>CHRISTMAS 2K26</span>
+      </div>
+    </div>
+
+    <div className="header-actions">
+      <button className="icon-btn" onClick={() => setDark(!dark)} title="Toggle theme">
+        {dark ? <Sun /> : <Moon />}
+      </button>
+
+      <button className="icon-btn" onClick={shareSong} title="Share">
+        <Share2 />
+      </button>
+
+      <button className="icon-btn" onClick={downloadPDF} title="Print or save PDF">
+        <Download />
+      </button>
+
+      <button className="admin-button" onClick={() => setAdminOpen(true)}>
+        <Lock size={16} />
+        {session ? 'Admin' : 'Admin Login'}
+      </button>
+    </div>
+  </header>
+
 
       <main className="main-content">
         <section className="hero">
