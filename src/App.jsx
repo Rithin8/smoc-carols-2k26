@@ -246,9 +246,9 @@ export default function App() {
   return (
     <div className={dark ? 'app dark' : 'app'}>
       <header className="topbar">
-        <div className="brand">
-          <div className="brand-icon"><Music size={23} /></div>
-          <div>
+        <div className="brand-icon">
+        <img src="/smoc-logo.png" alt="SMOC Church Logo" />
+        </div>
             <h1>SMOC CAROLS</h1>
             <span>CHRISTMAS 2K26</span>
           </div>
