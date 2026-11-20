@@ -10,6 +10,7 @@ import {
 
 export default function App() {
   const [songs, setSongs] = useState([]);
+  const [activeLanguage, setActiveLanguage] = useState('English');
   const [selected, setSelected] = useState(0);
   const [search, setSearch] = useState('');
   const [fontSize, setFontSize] = useState(19);
@@ -72,21 +73,33 @@ export default function App() {
     };
   }, []);
 
-  const filteredSongs = useMemo(() => {
-    const term = search.trim().toLowerCase();
-    if (!term) return songs;
-    return songs.filter(song =>
+ 
+const filteredSongs = useMemo(() => {
+  const term = search.trim().toLowerCase();
+
+  return songs.filter(song => {
+    const songLanguage = (song.language || '').toLowerCase();
+
+    const matchesLanguage =
+      activeLanguage === 'English'
+        ? songLanguage === 'english' || songLanguage === 'malayalam & english'
+        : songLanguage === 'malayalam' || songLanguage === 'malayalam & english';
+
+    const matchesSearch = !term ||
       `${song.title} ${song.lyrics} ${song.category} ${song.language}`
         .toLowerCase()
-        .includes(term)
-    );
-  }, [songs, search]);
+        .includes(term);
+
+    return matchesLanguage && matchesSearch;
+  });
+}, [songs, search, activeLanguage]);
+
 
   const currentSong = filteredSongs[selected] || null;
 
   useEffect(() => {
-    setSelected(0);
-  }, [search]);
+  setSelected(0);
+}, [search, activeLanguage]);
 
   const changeSong = (direction) => {
     setSelected(index =>
