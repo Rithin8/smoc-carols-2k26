@@ -255,6 +255,15 @@ const filteredSongs = useMemo(() => {
   const downloadPDF = () => {
     window.print();
   };
+  
+const printableSongs = songs.filter(song => {
+  const lang = (song.language || '').toLowerCase();
+
+  return activeLanguage === 'English'
+    ? lang === 'english' || lang === 'malayalam & english'
+    : lang === 'malayalam' || lang === 'malayalam & english';
+});
+
 
   return (
     
@@ -450,6 +459,34 @@ const filteredSongs = useMemo(() => {
             </div>
           )}
         </section>
+
+<div className="print-book">
+  {printableSongs.map((song, index) => (
+    <article className="print-song" key={song.id}>
+      <div className="print-song-header">
+        SMOC CAROLS 2K26
+      </div>
+
+      <p className="print-song-number">
+        {String(index + 1).padStart(2, '0')}
+      </p>
+
+      <h1>{song.title}</h1>
+
+      <p className="print-song-category">
+        {song.category || 'CHRISTMAS'}
+      </p>
+
+      <div className="print-song-lyrics">
+        {song.lyrics}
+      </div>
+
+      <div className="print-song-footer">
+        ST. MARY'S ORTHODOX CATHEDRAL · COIMBATORE
+      </div>
+    </article>
+  ))}
+</div>
 
         {session && (
           <section className="admin-panel">
