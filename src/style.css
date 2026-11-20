@@ -128,9 +128,13 @@ button:disabled { cursor: not-allowed; opacity: .4; }
 .hero::before { top: 24px; left: 4%; }
 .hero::after { bottom: 20px; right: 4%; }
 
-.hero-decoration {
-  color: #d6b86e;
-  font-size: 34px;
+.hero-decoration img {
+  width: 75px;
+  height: 75px;
+  object-fit: contain;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
 }
 
 .eyebrow {
