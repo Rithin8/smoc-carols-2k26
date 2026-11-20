@@ -313,6 +313,23 @@ const filteredSongs = useMemo(() => {
             </div>
             <span className="song-count">{songs.length} SONGS</span>
           </div>
+          
+<div className="language-selector">
+  <button
+    className={activeLanguage === 'English' ? 'language-btn active' : 'language-btn'}
+    onClick={() => setActiveLanguage('English')}
+  >
+    English
+  </button>
+
+  <button
+    className={activeLanguage === 'Malayalam' ? 'language-btn active' : 'language-btn'}
+    onClick={() => setActiveLanguage('Malayalam')}
+  >
+    മലയാളം
+  </button>
+</div>
+
 
           <div className="search-box">
             <Search size={19} />
