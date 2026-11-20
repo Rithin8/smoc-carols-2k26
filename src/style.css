@@ -128,11 +128,15 @@ button:disabled { cursor: not-allowed; opacity: .4; }
 .hero::before { top: 24px; left: 4%; }
 .hero::after { bottom: 20px; right: 4%; }
 
-.hero-decoration {
-  margin: 0;
-  padding: 0;
-  line-height: 0;
+
+.hero-decoration img {
+  width: 300px;
+  height: 250px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
 }
+
 
 .hero-decoration img {
   width: 300px;
