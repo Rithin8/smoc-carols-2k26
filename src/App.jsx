@@ -282,7 +282,7 @@ export default function App() {
       <main className="main-content">
         <section className="hero">
           <div className="hero-decoration">
-  <img src="/public/PNG (5).png" alt="SMOC Church Logo" />
+  <img src="/PNG (5).png" alt="SMOC Church Logo" />
 </div>
           <p className="eyebrow">ST. MARY'S ORTHODOX CATHEDRAL</p>
           <h2>The Digital<br /><span>Carol Book</span></h2>
