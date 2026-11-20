@@ -129,10 +129,10 @@ button:disabled { cursor: not-allowed; opacity: .4; }
 .hero::after { bottom: 20px; right: 4%; }
 
 .hero-decoration img {
-  width: 75px;
-  height: 75px;
+  width: 105px;
+  height: 105px;
   object-fit: contain;
-  border-radius: 50%;
+  border-radius: 20%;
   display: block;
   margin: 0 auto;
 }
