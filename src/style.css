@@ -812,4 +812,103 @@ button:disabled { cursor: not-allowed; opacity: .4; }
   border-color: #d6b86e;
 }
 
+/* PDF COLLECTION */
+.print-book {
+  display: none;
+}
+
+@media print {
+  @page {
+    size: A4;
+    margin: 20mm;
+  }
+
+  body,
+  .app {
+    background: white !important;
+    color: #174632 !important;
+  }
+
+  .topbar,
+  .hero,
+  .book-section,
+  .admin-panel,
+  .footer {
+    display: none !important;
+  }
+
+  .main-content {
+    display: block !important;
+    overflow: visible !important;
+  }
+
+  .print-book {
+    display: block !important;
+  }
+
+  .print-song {
+    display: flex;
+    flex-direction: column;
+    min-height: 255mm;
+    position: relative;
+    break-after: page;
+    page-break-after: always;
+    color: #174632;
+    background: white;
+  }
+
+  .print-song:last-child {
+    break-after: auto;
+    page-break-after: auto;
+  }
+
+  .print-song-header {
+    text-align: center;
+    font-size: 12px;
+    letter-spacing: 3px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #d6b86e;
+  }
+
+  .print-song-number {
+    text-align: center;
+    color: #b18d45;
+    margin-top: 35px;
+  }
+
+  .print-song h1 {
+    font-family: 'Cormorant Garamond', serif;
+    text-align: center;
+    font-size: 30px;
+    margin: 15px 0;
+  }
+
+  .print-song-category {
+    text-align: center;
+    color: #a58b55;
+    font-size: 11px;
+    letter-spacing: 2px;
+  }
+
+  .print-song-lyrics {
+    text-align: center;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    line-height: 1.9;
+    margin-top: 30px;
+  }
+
+  .print-song-footer {
+    margin-top: auto;
+    padding-top: 30px;
+    text-align: center;
+    font-size: 9px;
+    letter-spacing: 2px;
+    color: #a58b55;
+  }
+}
+
+
 
