@@ -249,8 +249,8 @@ export default function App() {
   <header className="topbar">
     <div className="brand">
       <div className="brand-icon">
-  <img src="/smoc-logo.jpg" alt="SMOC Logo" />
-      </div>
+  ♪
+</div>
 
       <div>
         <h1>SMOC CAROLS</h1>
@@ -281,7 +281,9 @@ export default function App() {
 
       <main className="main-content">
         <section className="hero">
-          <div className="hero-decoration">✦</div>
+          <div className="hero-decoration">
+  <img src="/smoc-logo.jpg" alt="SMOC Church Logo" />
+</div>
           <p className="eyebrow">ST. MARY'S ORTHODOX CATHEDRAL</p>
           <h2>The Digital<br /><span>Carol Book</span></h2>
           <p className="hero-subtitle">
